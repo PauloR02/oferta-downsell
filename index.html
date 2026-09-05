@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFERTA DE RESGATE — 100 Scripts e Respostas Prontas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #050505;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .top-alert {
+      background-color: #2a0000;
+      border: 2px solid #ff0000;
+      color: #ff4d4d;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      border-radius: 6px;
+      animation: pulse-red 2s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+    }
+
+    .header-section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .kicker {
+      color: #ff3333;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .main-title span {
+      color: #ff4d4d;
+      text-decoration: underline #ff0000;
+    }
+
+    .lede {
+      font-size: 16px;
+      color: #b0a898;
+      line-height: 1.5;
+    }
+
+    .lede strong {
+      color: #ffffff;
+    }
+
+    .mockup-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .mockup-container img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ff3333;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
+    }
+
+    .value-panel {
+      background: #0d0a0a;
+      border: 1px solid #ff3333;
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .panel-header {
+      text-align: center;
+      border-bottom: 1px solid #261010;
+      padding-bottom: 16px;
+    }
+
+    .panel-header h2 {
+      font-family: Georgia, serif;
+      color: #f5e096;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .panel-header p {
+      font-size: 13px;
+      color: #a0998e;
+    }
+
+    .modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .module-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #140808;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #220b0b;
+    }
+
+    .module-num {
+      background: #260a0a;
+      color: #ff8e8e;
+      border: 1px solid #ff3333;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .module-text {
+      font-size: 14px;
+      color: #e5ddc9;
+      line-height: 1.4;
+    }
+
+    .module-text strong {
+      color: #ffffff;
+    }
+
+    .efficiency-warning {
+      background: #2a0505;
+      border: 1px solid #e63946;
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+      font-size: 13px;
+      color: #f2c4c4;
+      font-weight: 600;
+    }
+
+    .offer-box {
+      background: #140a0a;
+      border: 2px solid #ff3333;
+      border-radius: 8px;
+      padding: 28px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+    }
+
+    .badge-discount {
+      background: #ff3333;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .price-strike {
+      font-size: 14px;
+      color: #8a8070;
+      text-decoration: line-through;
+    }
+
+    .price-main {
+      font-family: Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .price-sub {
+      font-size: 12px;
+      color: #a0998e;
+    }
+
+    cakto-upsell-accept::part(button){
+      background: #ff0000;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 18px 20px;
+      border-radius: 6px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+    cakto-upsell-accept::part(button):hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+    }
+
+    cakto-upsell-reject::part(button){
+      background: transparent;
+      color: #7a7469;
+      font-size: 12px;
+      text-decoration: underline;
+      border: none;
+      cursor: pointer;
+      line-height: 1.4;
+      max-width: 500px;
+    }
+    cakto-upsell-reject::part(button):hover {
+      color: #ff4d4d;
+    }
+
+    .guarantee-note {
+      font-size: 11px;
+      color: #ff3333;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="top-alert">
+      🛑 ESPERA! NÃO FECHE ESTA PÁGINA. ÚLTIMA CHANCE DE RESGATAR SEU ACESSO.
+    </div>
+
+    <div class="header-section">
+      <div class="kicker">OFERTA DE RESGATE ÚNICA — 73% OFF</div>
+      <h1 class="main-title">
+        Sério que você vai aceitar o risco de <br>
+        <span>LEVAR VÁCUO DAQUELA MULHER DE NOVO?</span>
+      </h1>
+      <p class="lede">
+        Eu entendi. Talvez <strong>R$ 47,90</strong> estivesse fora do seu orçamento agora.<br>
+        Mas o custo de ficar sem saber o que mandar e perder a chance com ela vai sair <strong>infinitamente mais caro</strong>.
+      </p>
+    </div>
+
+    <div class="mockup-container">
+      <img src="https://lh3.googleusercontent.com/d/1yA6_A5w1_C6p_M52Wc4g3GqXnK5j1J8x" alt="Mockup 100 Scripts e Respostas Prontas">
+    </div>
+
+    <p style="text-align: center; font-size: 14px; color: #e0d8c3;">
+      Vou bancar a diferença do meu próprio bolso para você não sair de mãos vazias:
+    </p>
+
+    <div class="value-panel">
+      <div class="panel-header">
+        <h2>100 SCRIPTS E RESPOSTAS PRONTAS (ACESSO TOTAL)</h2>
+        <p>Acesso completo ao mesmo arsenal sem retirar nenhuma mensagem ou script.</p>
+      </div>
+
+      <div class="modules-list">
+        <div class="module-item">
+          <span class="module-num">01</span>
+          <div class="module-text"><strong>15 Aberturas Hipnóticas:</strong> Esqueça o 'Oi, tudo bem?' e receba respostas rápidas.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">02</span>
+          <div class="module-text"><strong>15 Viradas de Chave (Tensão Sexual):</strong> Mude o clima do papo em poucas mensagens.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">03</span>
+          <div class="module-text"><strong>15 Respostas de Impacto para Objeções:</strong> Desarme o 'Tenho namorado' com postura.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">04</span>
+          <div class="module-text"><strong>12 Scripts de Reativação de Vácuo:</strong> Faça ela voltar a mandar mensagem sem parecer carente.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">05</span>
+          <div class="module-text"><strong>12 Fechamentos de Encontro:</strong> Convide como um homem seguro que recebe um SIM.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">06</span>
+          <div class="module-text"><strong>10 Scripts de Reconquista:</strong> Traga de volta o interesse daquela pessoa específica.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">07</span>
+          <div class="module-text"><strong>12 Respostas Magnéticas para Stories:</strong> Seja o único cara lembrado nas DMs.</div>
+        </div>
+        <div class="module-item">
+          <span class="module-num">08</span>
+          <div class="module-text"><strong>9 Scripts de Manutenção:</strong> Garanta o desejo em alta até a hora de se encontrarem.</div>
+        </div>
+      </div>
+
+      <div class="efficiency-warning">
+        ⚠️ AVISO CRÍTICO: Se recusar aqui, este link expira e o valor volta para R$ 97,00.
+      </div>
+    </div>
+
+    <div class="offer-box">
+      <div class="badge-discount">OFERTA SIMBÓLICA DE RESGATE (-73%)</div>
+
+      <div class="price-strike">De R$ 97,00 por R$ 47,90</div>
+      <div class="price-main">R$ 25,90</div>
+      <div class="price-sub">Adicionado instantaneamente à sua conta · Cobrança em 1-Clique</div>
+
+      <cakto-upsell-buttons>
+        <cakto-upsell-accept
+          bg-color="#ff0000"
+          text-color="#ffffff"
+          upsell-accept-url="members_area"
+          offer-id="SEU_OFFER_ID_DOWNSELL_AQUI"
+          app-base-url="https://app.cakto.com.br"
+          offer-type="downsell"
+          upsell-reject-url="SEU_LINK_PAGINA_DE_OBRIGADO_PRINCIPAL"
+        >
+          SIM! QUERO APROVEITAR O DESCONTO POR R$ 25,90
+        </cakto-upsell-accept>
+        <cakto-upsell-reject
+          upsell-reject-url="SEU_LINK_PAGINA_DE_OBRIGADO_PRINCIPAL"
+        >
+          Não, prefiro abrir mão do desconto de R$ 25,90 e correr o risco de ficar no vácuo sozinho.
+        </cakto-upsell-reject>
+      </cakto-upsell-buttons>
+
+      <div class="guarantee-note">
+        🔒 ESTA PÁGINA NUNCA MAIS APARECERÁ PARA O SEU IP.
+      </div>
+    </div>
+
+  </div>
+
+<script type="text/javascript" src="https://caktoscripts.nyc3.cdn.digitaloceanspaces.com/upsell.js"></script>
+</body>
+</html>
